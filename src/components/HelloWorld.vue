@@ -1,48 +1,67 @@
 <template>
-  <div class="hello">
-   	<div>
-   		<a href="javascript:;">第一次使用</a>
-   		<span>第二次使用</span>
-   	</div>
-  </div>
+	<div class="hello">
+		<div>
+			<a href="javascript:;">第一次使用</a>
+			<span>第二次使用</span>
+			<div class="md-example-child md-example-child-button md-example-child-button-0">
+				<md-button @click='searchAxios'>{{name}}</md-button>
+				<md-button disabled>Primary Disabled</md-button>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-     
-    }
-  }
-}
+	export default {
+		name: 'HelloWorld',
+		data() {
+			return {
+				name: 111
+			}
+		},
+		methods: {
+			searchAxios() {
+				this.$axios.get("/department/tree").then(res => {
+					if(res.status === 0) {
+						console.log(res)
+//						this.departData = res.result
+					}
+//					this.loading = false
+				})
+			}
+		}
+	}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.hello{
+	h1,
+	h2 {
+		font-weight: normal;
+	}
 	
-	a{
-		color: red;
-		font-size: 30px;
+	ul {
+		list-style-type: none;
+		padding: 0;
 	}
-	span{
-		color:gray;
-		font-size: 36px;
+	
+	li {
+		display: inline-block;
+		margin: 0 10px;
 	}
-}
+	
+	a {
+		color: #42b983;
+	}
+	
+	.hello {
+		a {
+			color: red;
+			font-size: 30px;
+		}
+		span {
+			color: gray;
+			font-size: 36px;
+		}
+	}
 </style>

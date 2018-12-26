@@ -13,11 +13,16 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "fastclick": "^1.0.6",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "lib-flexible": "^0.3.2",
+    "mand-mobile": "^2.0.0-rc.4",
+    "normalize.css": "^8.0.1",
     "vue": "^2.5.2",
+    "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
