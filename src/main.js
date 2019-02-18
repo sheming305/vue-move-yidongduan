@@ -7,7 +7,7 @@ import router from './router'
 import './axios'
 import mandMobile from 'mand-mobile'
 import 'mand-mobile/lib/mand-mobile.css'
-import 'lib-flexible/flexible.js' //实现rem自适应
+import 'lib-flexible/flexible.js'
 import 'normalize.css' //为了使浏览器更加一致地呈现所有元素并符合现代标准
 import fastclick from 'fastclick' //延迟网页点击的300ms延迟
 Vue.config.productionTip = false

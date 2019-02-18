@@ -8,6 +8,12 @@
 				<md-button disabled>Primary Disabled</md-button>
 			</div>
 		</div>
+		  <div class="md-example-child md-example-child-steps md-example-child-steps-4">
+    <md-steps
+      :steps="steps"
+      :current="currentStep">
+    </md-steps>
+  </div>
 	</div>
 </template>
 
@@ -16,7 +22,22 @@
 		name: 'HelloWorld',
 		data() {
 			return {
-				name: 111
+				name: 111,
+				 steps: [
+        {
+          name: '登录',
+        },
+        {
+          name: '开通',
+        },
+        {
+          name: '验证',
+        },
+        {
+          name: '成功',
+        },
+      ],
+      currentStep: 0,
 			}
 		},
 		methods: {
